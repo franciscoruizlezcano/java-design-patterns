@@ -6,17 +6,14 @@ import java.util.HashMap;
 
 public final class ColorFactory implements AbstractFactory<Color, ColorEnum> {
 
-    private static ColorFactory instance;
-    private final HashMap<ColorEnum, Color> colorHashMap;
+    private static ColorFactory              instance;
+    private final  HashMap<ColorEnum, Color> colorHashMap;
 
-    public ColorFactory() throws InstantiationException {
-        if (instance == null) throw new InstantiationException();
-
-        this.colorHashMap = new HashMap<>();
-
-        this.colorHashMap.put(ColorEnum.BLUE, new Blue());
-        this.colorHashMap.put(ColorEnum.RED, new Red());
-
+    private ColorFactory() {
+        this.colorHashMap = new HashMap<>(){{
+            put(ColorEnum.BLUE, new Blue());
+            put(ColorEnum.RED, new Red());
+        }};
     }
 
     @Override

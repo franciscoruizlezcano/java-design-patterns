@@ -2,7 +2,7 @@ package com.laikacode.patterns.creation.factory.method;
 
 public final class ExpertPlan implements Plan {
 
-    private final double PRICE = 1.50;
+    private final double PRICE    = 1.50;
     private final double DISCOUNT = this.PRICE * 0.30;
 
     @Override

@@ -6,20 +6,17 @@ import java.util.HashMap;
 
 public final class AnimalFactory implements AbstractFactory<Animal, AnimalEnum> {
 
-    private final HashMap<AnimalEnum, Animal> animalHashMap;
-    private static AnimalFactory instance;
+    private final  HashMap<AnimalEnum, Animal> animalHashMap;
+    private static AnimalFactory               instance;
 
-    public AnimalFactory() throws Exception {
-
-        if (instance == null) throw new InstantiationException();
-
-        this.animalHashMap = new HashMap<>();
-
-        this.animalHashMap.put(AnimalEnum.DOG, new Dog());
-        this.animalHashMap.put(AnimalEnum.DUCK, new Duck());
+    private AnimalFactory(){
+        this.animalHashMap = new HashMap<>() {{
+            put(AnimalEnum.DOG, new Dog());
+            put(AnimalEnum.DUCK, new Duck());
+        }};
     }
 
-    public static void createInstance() throws Exception {
+    public static void createInstance(){
         if (instance == null){
             instance = new AnimalFactory();
         }

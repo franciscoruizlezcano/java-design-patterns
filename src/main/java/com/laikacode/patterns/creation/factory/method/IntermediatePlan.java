@@ -1,9 +1,9 @@
 package com.laikacode.patterns.creation.factory.method;
 
 public final class IntermediatePlan implements Plan {
-    private final double PRICE = 1.25;
+    private final double PRICE    = 1.25;
     private final double DISCOUNT = this.PRICE * 0.30;
-    private final double ROYALTY = this.PRICE * 0.40;
+    private final double ROYALTY  = this.PRICE * 0.40;
 
     @Override
     public double getPricePerMonth() {
