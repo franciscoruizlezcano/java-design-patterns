@@ -2,7 +2,7 @@ package com.laikacode.patterns.creation.factory.method;
 
 import java.util.HashMap;
 
-public class Factory {
+public final class Factory {
 
     private final HashMap<PlanEnum, Plan> planHashMap;
 

@@ -1,6 +1,6 @@
 package com.laikacode.patterns.creation.factory.method;
 
-public class IntermediatePlan implements Plan {
+public final class IntermediatePlan implements Plan {
     private final double PRICE = 1.25;
     private final double DISCOUNT = this.PRICE * 0.30;
     private final double ROYALTY = this.PRICE * 0.40;

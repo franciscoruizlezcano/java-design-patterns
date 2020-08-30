@@ -1,6 +1,6 @@
 package com.laikacode.patterns.creation.factory.method;
 
-public class BasicPlan implements Plan {
+public final class BasicPlan implements Plan {
 
     private final double PRICE = 1.50;
 
