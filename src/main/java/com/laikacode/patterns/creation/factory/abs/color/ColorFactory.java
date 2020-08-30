@@ -9,7 +9,7 @@ public final class ColorFactory implements AbstractFactory<Color, ColorEnum> {
     private static ColorFactory instance;
     private final HashMap<ColorEnum, Color> colorHashMap;
 
-    public ColorFactory() throws InstantiationException {
+    private ColorFactory() throws InstantiationException {
         if (instance == null) throw new InstantiationException();
 
         this.colorHashMap = new HashMap<>();

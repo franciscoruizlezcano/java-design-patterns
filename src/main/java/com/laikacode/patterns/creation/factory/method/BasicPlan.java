@@ -14,8 +14,4 @@ public final class BasicPlan implements Plan {
         return this.PRICE * 365;
     }
 
-
-
-
-
 }

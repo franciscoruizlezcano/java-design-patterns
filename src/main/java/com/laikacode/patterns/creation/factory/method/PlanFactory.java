@@ -2,13 +2,13 @@ package com.laikacode.patterns.creation.factory.method;
 
 import java.util.HashMap;
 
-public final class Factory {
+public final class PlanFactory {
 
     private final HashMap<PlanEnum, Plan> planHashMap;
 
-    private static Factory instance;
+    private static PlanFactory instance;
 
-    public Factory() throws InstantiationException {
+    private PlanFactory() throws InstantiationException {
         if(instance == null) throw new InstantiationException();
 
         this.planHashMap = new HashMap<>();
@@ -20,7 +20,7 @@ public final class Factory {
 
     public static void createInstance() throws InstantiationException {
         if (instance == null) {
-            instance = new Factory();
+            instance = new PlanFactory();
         }
     }
 
@@ -28,7 +28,6 @@ public final class Factory {
         if (plan == null){
             throw new NullPointerException();
         }
-
 
         if (this.planHashMap.containsKey(plan)){
             return planHashMap.get(plan);

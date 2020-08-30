@@ -9,7 +9,7 @@ public final class AnimalFactory implements AbstractFactory<Animal, AnimalEnum> 
     private final HashMap<AnimalEnum, Animal> animalHashMap;
     private static AnimalFactory instance;
 
-    public AnimalFactory() throws Exception {
+    private AnimalFactory() throws Exception {
 
         if (instance == null) throw new InstantiationException();
 
