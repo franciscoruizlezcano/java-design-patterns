@@ -8,15 +8,17 @@ public final class PlanFactory {
 
     private static PlanFactory instance;
 
-    private PlanFactory() {
-        this.planHashMap = new HashMap<>(){{
-            put(PlanEnum.BASIC, new BasicPlan());
-            put(PlanEnum.INTERMEDIATE, new IntermediatePlan());
-            put(PlanEnum.EXPERT, new ExpertPlan());
-        }};
+    private PlanFactory() throws InstantiationException {
+        if(instance == null) throw new InstantiationException();
+
+        this.planHashMap = new HashMap<>();
+
+        planHashMap.put(PlanEnum.BASIC, new BasicPlan());
+        planHashMap.put(PlanEnum.INTERMEDIATE, new IntermediatePlan());
+        planHashMap.put(PlanEnum.EXPERT, new ExpertPlan());
     }
 
-    public static void createInstance() {
+    public static void createInstance() throws InstantiationException {
         if (instance == null) {
             instance = new PlanFactory();
         }
