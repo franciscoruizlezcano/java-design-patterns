@@ -1,5 +1,5 @@
 package com.laikacode.patterns.creation.factory.abs;
 
-public interface AbstractFactory<T extends Object, S extends Enum> {
+public interface AbstractFactory<T, S> {
     T create(S type);
 }
