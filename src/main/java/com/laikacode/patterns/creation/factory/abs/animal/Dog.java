@@ -1,6 +1,6 @@
 package com.laikacode.patterns.creation.factory.abs.animal;
 
-public class Dog implements Animal{
+public final class Dog implements Animal{
     @Override
     public String getType() {
         return "Dog";

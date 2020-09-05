@@ -3,13 +3,13 @@ package com.laikacode.patterns.creation.builder;
 import java.util.Date;
 
 public final class ProductBuilder implements Builder<Product>{
-    private int id;
+    private int    id;
     private String description;
-    private Date firstAdmission;
+    private Date   firstAdmission;
     private String serialNumber;
     private double price;
     private String imageUrl;
-    private int warrantyDays;
+    private int    warrantyDays;
 
     public ProductBuilder withId(int id){
         this.id = id;

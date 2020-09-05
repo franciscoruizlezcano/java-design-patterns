@@ -2,14 +2,17 @@ package com.laikacode.patterns.creation.builder;
 
 import java.util.Date;
 
-public class Product {
-    private final int    id;
-    private final String description;
-    private final Date   firstAdmission;
-    private final String serialNumber;
-    private final double price;
-    private final String imageUrl;
-    private final int    warrantyDays;
+public final class Product {
+    private int    id;
+    private String description;
+    private Date   firstAdmission;
+    private String serialNumber;
+    private double price;
+    private String imageUrl;
+    private int    warrantyDays;
+
+    public Product() {
+    }
 
     public Product(
             int    id,
