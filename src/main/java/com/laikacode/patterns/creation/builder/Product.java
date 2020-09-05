@@ -3,16 +3,13 @@ package com.laikacode.patterns.creation.builder;
 import java.util.Date;
 
 public class Product {
-    private int    id;
-    private String description;
-    private Date   firstAdmission;
-    private String serialNumber;
-    private double price;
-    private String imageUrl;
-    private int    warrantyDays;
-
-    public Product() {
-    }
+    private final int    id;
+    private final String description;
+    private final Date   firstAdmission;
+    private final String serialNumber;
+    private final double price;
+    private final String imageUrl;
+    private final int    warrantyDays;
 
     public Product(
             int    id,
@@ -36,55 +33,27 @@ public class Product {
         return id;
     }
 
-    public void setId(int id) {
-        this.id = id;
-    }
-
     public String getDescription() {
         return description;
-    }
-
-    public void setDescription(String description) {
-        this.description = description;
     }
 
     public Date getFirstAdmission() {
         return firstAdmission;
     }
 
-    public void setFirstAdmission(Date firstAdmission) {
-        this.firstAdmission = firstAdmission;
-    }
-
     public String getSerialNumber() {
         return serialNumber;
-    }
-
-    public void setSerialNumber(String serialNumber) {
-        this.serialNumber = serialNumber;
     }
 
     public double getPrice() {
         return price;
     }
 
-    public void setPrice(double price) {
-        this.price = price;
-    }
-
     public String getImageUrl() {
         return imageUrl;
     }
 
-    public void setImageUrl(String imageUrl) {
-        this.imageUrl = imageUrl;
-    }
-
     public int getWarrantyDays() {
         return warrantyDays;
-    }
-
-    public void setWarrantyDays(int warrantyDays) {
-        this.warrantyDays = warrantyDays;
     }
 }
